@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main {
+  padding: 0 5%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.other-sections {
+  min-height: 250vh;
+  background-color: teal;
+}
+
+.team__container {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.team__title {
+  font-size: 2rem;
+  color: #222222;
+}
+
+.team__title::after {
+  content: "";
+  display: block;
+  margin: 1rem auto;
+  width: 60px;
+  height: 3px;
+  background-color: teal;
+}
+
+.team p {
+  color: #6f6f6f;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.team__row {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 750px) {
+  .team__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .team__row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 1rem 1rem 1.5rem 1rem;
+}
+
+.card__image {
+  border-radius: 10px;
+}
+
+.card__title {
+  font-size: 1.4rem;
+  color: #222222;
+  margin: 0.7rem 0 0.2rem;
+}
+
+.card__role {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #6c757d;
+}
+
+.card__socials {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.card__socials__link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #6c757d;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+  transition: 0.3s ease-in;
+}
+
+.card__socials__link:hover {
+  border-color: teal;
+}
+
+.card__socials__link img {
+  width: 18px;
+  height: 18px;
+}
