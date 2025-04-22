@@ -26,6 +26,9 @@ img {
 .team__title {
   font-size: 2rem;
   color: #222222;
+  transform: translateY(200px);
+  opacity: 0;
+  transition: 1s ease-in;
 }
 
 .team__title::after {
@@ -37,11 +40,14 @@ img {
   background-color: teal;
 }
 
-.team p {
+.team__p {
   color: #6f6f6f;
   text-align: center;
   font-size: 1.1rem;
   line-height: 1.4;
+  transform: translateY(200px);
+  opacity: 0;
+  transition: 1s ease-in;
 }
 
 .team__row {
@@ -68,6 +74,10 @@ img {
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   padding: 1rem 1rem 1.5rem 1rem;
+  opacity: 0;
+  transform: translateY(200px);
+  transition: 1s ease-in;
+  text-align: center;
 }
 
 .card__image {
@@ -110,4 +120,24 @@ img {
 .card__socials__link img {
   width: 18px;
   height: 18px;
+}
+
+.card.animate-onvisible,
+.team__title.animate-onvisible,
+.team__p.animate-onvisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.viewport {
+  position: relative;
+  top: 0;
+  left: 0;
+  /* top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; */
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
 }
